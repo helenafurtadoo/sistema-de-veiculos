@@ -2,7 +2,6 @@ package sistemaVeiculos;
 
 public abstract class Veiculo {
 	// Attributes (encapsulados)
-	abstract double calcularAluguel(int dias);
 	public String marca;
 	public String modelo;
 	public int ano;
@@ -16,6 +15,13 @@ public abstract class Veiculo {
 		this.ano = ano;
 		this.valorDiaria = valorDiaria;
 		this.placa = placa;
+	}
+	
+	abstract double calcularAluguel(int dias);
+	
+	@Override
+	public String toString() {
+		return "Modelo:" + modelo;
 	}
 	
 	// getter e setters
